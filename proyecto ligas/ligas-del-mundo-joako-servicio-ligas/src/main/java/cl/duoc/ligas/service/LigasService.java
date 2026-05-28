@@ -53,6 +53,7 @@ public class LigasService {
     public DtoLigasResponse crearLiga(DtoLigasResponse requestDto){
         log.info("Creando nueva liga con nombre: {}", requestDto.getNombre());
         LigasModel nuevaLiga = new LigasModel();
+        nuevaLiga.setId(requestDto.getId());
         nuevaLiga.setNombre(requestDto.getNombre());
         nuevaLiga.setPais(requestDto.getPais());
         nuevaLiga.setLogoUrl(requestDto.getLogoUrl());
